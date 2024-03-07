@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1st sem tales</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f8f8;
+    }
+    .container {
+        max-width: 600px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: #f4f6f7;
+        border: 1px solid #b3e7f4;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        color: #a31212;
+    }
+    input[type="radio"] {
+        margin-right: 10px;
+    }
+    #loginBtn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #1065c0;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #loginBtn:hover {
+        background-color: #ee0909;
+    }
+    #content {
+        display: none;
+        background-color: #fbf2d200;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2, h3 {
+        color: #a31212;
+        text-align: center;
+    }
+    p {
+        text-align: center;
+    }
+    img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    footer {
+        margin-top: 50px;
+        text-align: center;
+        color: #555;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <div>
+            <label for="question">Are you a student of ISE-D? Answer this simple question to login!</label><br>
+            <input type="radio" id="WE KNOW THAT" name="answer" value="WE KNOW THAT">
+            <label for="WE KNOW THAT">WE KNOW THAT</label>
+        </div>
+        <div>
+            <input type="radio" id="WE NOW THAT" name="answer" value="WE NOW THAT">
+            <label for="WE NOW THAT">WE NOW THAT</label>
+        </div>
+        <button type="button" id="loginBtn">Login</button>
+    </form>
+</div>
+
+<div id="content">
+    <header>
+        <h1>NATIONAL INSTITUTE OF ENGINEERING, MYSURU</h1>
+        <h2>ISE-D CHARMS</h2>
+        <h3>1st Semester Tales</h3>
+        <p>From strangers to friends:semester one edition</p>
+    </header>
+
+    <section>
+        <h2>Highlights</h2>
+        <p>Reflect on some of the memorable moments from the 1st semester.</p>
+        <img src = "sem 1 crew.jpg"alt ="moment 1">
+        <p>Sem 1 crew</p>
+        <img src = "slaying in all white.jpg" alt ="moment 2" >
+        <p> Slaying in all white</p>
+        <img src = "men in black.jpg" alt="moment 3">
+        <p> Men in black</p>
+        <img src= "zoo grp pic.jpg" alt="moment 4">
+        <p>Zooooo</p>
+
+        <img src= "python class.jpg" alt="moment 5">
+        <p>python class</p>
+        
+        <video max width="1000" max height="360" controls>
+            <source src="1stsemdone.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    <footer>
+        <p>© 2024 swathi deshmukh</p>
+    </footer>
+</div>
+
+<script>
+    document.getElementById('loginBtn').addEventListener('click', function() {
+        var option = document.querySelector('input[name="answer"]:checked').value;
+        if (option === 'WE NOW THAT') {
+            document.getElementById('content').style.display = 'block';
+            document.querySelector('.container').style.display = 'none';
+        } else {
+            alert("Oops, looks like you bunked Veeru Sir's classes.");
+        }
+    });
+</script>
+
+</body>
+</html>
